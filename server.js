@@ -12,7 +12,7 @@ process.on('uncaughtException', err => {
 
 // Connect to database with mongoose
 const DB =
-	'mongodb+srv://basquith:Romeo0416@cluster0.lxopqvz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+	'mongodb+srv://basquith:Romeo0416@cluster0.lxopqvz.mongodb.net/nasessions?retryWrites=true';
 mongoose.connect(DB, {
     useCreateIndex: true,
     useNewUrlParser: true,
