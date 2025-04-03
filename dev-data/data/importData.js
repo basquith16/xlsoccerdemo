@@ -5,10 +5,8 @@ dotenv.config({path: './config.env'});
 const User = require('../../models/userModel');
 
 // Connect to database with mongoose
-const DB = process.env.DATABASE.replace(
-    '<PASSWORD>',
-    process.env.DATABASE_PASSWORD
-);
+const DB =
+	'mongodb+srv://basquith:Romeo0416@cluster0.lxopqvz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(DB, {
     useCreateIndex: true,
     useNewUrlParser: true,
