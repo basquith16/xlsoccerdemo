@@ -1,0 +1,37 @@
+div.header_top
+    if user
+        img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
+        span= `Welcome ${user.name.split(' ')[0]}`
+        span 
+            a(href='/myaccount') My Account
+        a.nav__el.nav__el--logout Log out
+    
+    else 
+        span 
+            a(href='/login') Login 
+        span 
+            a(href='/register') Register
+
+div.header_bottom.flex
+    logo
+        a(href='/')
+            img(src='/img/logo.webp' alt='XL Soccer World Logo')
+    nav.nav.hidden-sm.hidden-xs
+        ul.inner-nav.flex
+            li: a(href='/') HOME 
+            li: a(href='/sessions') Leagues 
+            li: a(href='#' Youth Sports)
+            li: a(href='#' style='color:#a6a6a6') Camps 
+            li: a(href='#' style='color:#a6a6a6') Birthdays & Events
+            li: a(href='#' style='color:#a6a6a6') Youth Academy
+            li: a(href='#' style='color:#a6a6a6') More
+
+    nav.menu--right.visible-sm.visible-xs(role="navigation")
+        .menuToggle
+            input(type="checkbox")
+            span
+            span
+            span
+            ul.menuItem
+                li: a(href='/') HOME 
+                li: a(href='/sessions') Leagues 
